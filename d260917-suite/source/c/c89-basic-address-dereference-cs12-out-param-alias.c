@@ -1,0 +1,18 @@
+// <svf-test-suite>@64f017e/src/cs_tests/cs12.c
+
+int obj;
+void foo(int**, int**);
+int main(){
+	int **x, **y;
+	int *a, *b, *c, *d,*e;
+	x=&a; y =&b;
+	foo(x,y);
+
+	x = &c;
+	foo(x,y);
+
+}
+
+void foo(int **p, int **q){
+	*p = &obj;
+}

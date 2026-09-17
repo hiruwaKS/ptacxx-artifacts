@@ -1,0 +1,13 @@
+// <original>
+
+#include <unordered_set>
+
+using namespace std;
+
+int main() {
+  int a = 1;
+  unordered_set<int*> s;
+  s.insert(&a);
+  int* p = *s.begin();
+  return 0;
+}

@@ -1,0 +1,37 @@
+// <svf-test-suite>@64f017e/src/non_annotated_tests/struct/nystrom1.c
+
+#include <stdlib.h>
+int a,b;
+struct foo{
+	int x;
+	int y;
+
+};
+
+typedef struct foo FOO;
+
+void* alloc(int n){
+	return malloc(n);
+
+}
+
+FOO *ex(){
+
+	int *q;
+	FOO *p;
+	FOO *w;
+	p = (FOO*)alloc(sizeof(FOO));
+	p->x = a;
+	p->y = b;
+	q = &a;
+	*q = b;
+	return p;
+
+}
+
+int main(){
+
+	ex();
+	ex();
+
+}

@@ -1,0 +1,33 @@
+// <svf-test-suite>@64f017e/src/basic_cpp_tests/array-3.cpp
+
+#include <array>
+
+using namespace std;
+
+int global_obj;
+int *global_ptr = &global_obj;
+
+class A {
+  public:
+    virtual void f(int *i) const {
+
+    }
+};
+
+int main(int argc, char **argv)
+{
+  int *ptr = &global_obj;
+
+  array<const A *, 2> aarray;
+  A *a0 = new A;
+  A *a1 = new A;
+
+  aarray[0] = a1;
+  aarray[1] = a1;
+
+  const A *aptr = aarray.back();
+
+  aptr->f(ptr);
+
+  return 0;
+}
