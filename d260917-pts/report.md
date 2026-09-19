@@ -8,7 +8,7 @@
 
 - 精度：流不敏感+上下文不敏感
 - 所用插桩器
-    - instrument 与 hook
+    - instrument 与 hook in PTACXX@d3b178a
     - 插桩器可靠性如何？
         - 简单地测过，能用
 - 插桩方式
@@ -49,7 +49,7 @@ python3 instrument.py <LLVM14> \
 | 指标 | llvm14 | llvm21 |
 |---|---|---|
 | 用例数 | 921 | 923 |
-| 运行成功 | 921 | 921 |
+| 运行成功（rc=0） | 921 | 921 |
 | 运行失败（已排除） | 0 | 2（UB 用例） |
 | 非空 pts 用例 | 866 | 866 |
 | pts 行数合计 | 150,159 | 123,882 |
@@ -60,5 +60,12 @@ python3 instrument.py <LLVM14> \
 
 ## Usage
 
+- crash fix
+    - e260917-lotus-crash-fix
+- unsoundness fix
+
 ## Other
 
+- TODO
+    - 插桩器对 null pointer 的支持
+    - 插桩器对 流敏感和上下文敏感 的支持
