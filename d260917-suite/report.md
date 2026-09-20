@@ -53,6 +53,7 @@
         - libstdc++
             - GCC 13.3.0（Ubuntu 13.3.0-6ubuntu2~24.04）
 - 编译到目标文件运行验证
+- 生成 `caseId.csv`
 
 ## Data Result
 

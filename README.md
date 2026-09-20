@@ -32,6 +32,7 @@
         - small statistics
         - illustration
     - blob
+        - `reproducible.md`: contain commands to reproduce the data and private information
         - large table (e.g. csv)
         - bitcode/binary file
         - **will not be uploaded**
